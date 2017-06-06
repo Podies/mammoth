@@ -1,0 +1,54 @@
+//====================================
+//Variables
+//====================================
+
+$font-color: #474847;
+$heading-color: #1D3C29;
+$accent-color: #56C28C;
+$hovering-color: #83D3AA;
+$title-color: #1D3C29;
+$title-color2: #56C28C;
+
+//====================================
+// Mixins
+//====================================
+
+@mixin clearfix {
+  *zoom: 1;
+  &:before,
+  &:after {
+    display: table;
+    content:'';
+    line-height: 0;
+  }
+  &:after {
+    clear: both;
+  }
+}
+
+%flex-between {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+%transition{
+	transition: all 250ms ease-in-out;
+}
+
+%center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+     -moz-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+       -o-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}

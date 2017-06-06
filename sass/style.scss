@@ -1,0 +1,492 @@
+@import "grid";
+@import "base";
+
+//====================================
+// Primary Header
+//====================================
+
+.header{
+	background: #FDFDFD;
+	opacity: 0.9;
+	padding: 20px;
+	position: fixed;
+	width: 100%;
+	z-index: 100;
+	box-shadow: 0px 2px 4px 0 rgba(0, 0, 0,0.12);
+}
+.nav {
+	@extend %flex-between;
+}
+.nav__item-list {
+	@extend %flex-between;
+}
+.nav__item{
+	margin-right: 50px;
+	font-size: 1.250em;
+	@extend %transition;
+	&:hover {
+		color: $accent-color;
+	}
+	&.nav__active {
+		font-weight: 900;
+		&:hover {
+			color: $font-color;
+		}
+	}
+	&.login-btn {
+		margin-right: 0;
+	}
+}
+
+//====================================
+// Hero Section
+//====================================
+.hero {
+  position: relative;
+  .grid {
+  	max-height: 957px;
+		height: 100%;
+  	position: absolute;
+  	top: 0;
+  }
+}
+.hero__section {
+	padding-top: 126px;
+	max-height: 957px;
+	height: 100%;
+	position: relative;
+}
+.small-screen-img {
+	display: none;
+}
+.heading-text {
+	color: #fff;
+	text-transform: uppercase;
+	font-size: 3.750em;
+	line-height: 72px;
+}
+.subhead-text {
+	color: #fff;
+	font-style: italic;
+	font-size: 1.875em;
+}
+.hero__btn {
+	position: absolute;
+	padding: 17px 58px;
+	font-size: 1.375em;
+	bottom: 8%;
+}
+
+//====================================
+// Features Section
+//====================================
+
+.features {
+	padding: 70px;
+}
+.title-text {
+	color: $title-color;
+	font-size: 2.188em;
+	font-style: italic;
+	line-height: 49px;
+}
+.features__list {
+	padding: 110px 0;
+}
+.feature__title {
+	color: $title-color2;
+	font-size: 2.188em;
+	line-height: 28px;
+	margin-top: 37px;
+}
+.feature__title2 {
+	margin-top: 51px;
+}
+.feature__title3 {
+	margin-top: 59.34px;
+}
+.feature__description {
+	font-size: 1.000em;
+	line-height: 22.4px;
+	margin-top: 10px;
+}
+.feature-btn {
+	padding: 17px 65px;
+}
+
+
+//====================================
+// Carousel Section
+//====================================
+
+.carousel {
+	background: #f4f4f4;
+	padding: 40px;
+}
+.subtitle {
+	color: $title-color;
+	font-size: 1.375em;
+}
+
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+.mySlides {
+    display: none;
+}
+.carousel__nav {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-top: 30px;
+}
+.prev, .next {
+  cursor: pointer;
+  // width: auto;
+  color: #1d3c29;
+  font-size: 30px;
+  transition: 0.6s ease;
+  &:hover {
+  	color: #56c28c;
+  }
+}
+
+.prev {
+	margin-right: 10%;
+}
+.next {
+  margin-left: 10%;
+}
+
+.text {
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  top: 0;
+  text-align: center;
+}
+
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+.dot {
+  cursor:pointer;
+  width: 14.4px;
+  height: 14.4px;
+  background-color: #1d3c29;
+  margin: 0 22px;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #56c28c;
+}
+
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+
+//====================================
+// Footer Section
+//====================================
+
+.contact {
+	padding: 120px 0 80px 0;
+}
+.contact__email {
+	font-size: 1.250em;
+	margin-top: 10px;
+	font-style: italic;
+}
+
+.copyright-text {
+	background: #f5f5f5;
+	padding: 24px 0;
+	h5 {
+		font-size: 1.250em;
+	}
+}
+
+//====================================
+// Signup Modal
+//====================================
+
+.modal {
+	display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+	background: rgba(#4A4A4A, 0.4);
+	z-index: 1000;
+	padding: 15px;
+}
+.modal__box {
+	padding: 50px;
+	opacity: 1;
+	position: relative;
+	z-index: 10000;
+	left: 50%;
+	max-width: 766px;
+	width: 100%;
+	top:116px;
+	background: #FFFFFF;
+	border-radius: 4.4px;
+	box-shadow: 0 0 8px rgba(0, 0, 0, 0.4);
+	-webkit-transform: translateX(-50%);
+	   -moz-transform: translateX(-50%);
+	    -ms-transform: translateX(-50%);
+	     -o-transform: translateX(-50%);
+	        transform: translateX(-50%);
+}
+.remove-btn{
+	position: relative;
+	.close-btn {
+		position: absolute;
+		right: -20px;
+		top: -20px;
+		cursor: pointer;
+		#close-btn {
+			@extend %transition;
+		}
+		&:hover #close-btn {
+			stroke: #777;
+		}
+	}
+}
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 1.750em;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal__logo {
+	margin-top: 10px;
+}
+.signup-ques {
+	font-size: 1.125em;
+	margin-top: 30px;
+}
+.signup-choices {
+	background: #EBEBEB;
+}
+.signup-choice__list {
+	@extend %flex-between;
+	margin-top: 30px;
+}
+.signup-choice__item {
+	text-align: center;
+	padding: 11px 30px;
+	flex-grow: 1;
+	@extend %transition;
+	cursor: pointer;
+	border: 1px solid #EBEBEB;
+	&:hover, &.active {
+		background: #fff;
+		box-shadow: 0 0 1px rgba(0, 0, 0, 0.4);
+	}
+}
+.signup-input {
+	margin-top: 10px;
+	.form-control {
+		margin-top: 20px;
+	}
+}
+.submit-btn {
+	margin-top: 30px;
+	background: #E6E6E6;
+	padding: 17px 102px;
+	&:active {
+		background: $accent-color;
+	}
+}
+
+//====================================
+// Product and Features
+//====================================
+
+.curve-cotainer {
+	position: relative;
+}
+.curve-header {
+	position: absolute;
+	top: 100px;
+	width: 100%;
+}
+.feature-curve__item {
+	.feature-curve__text {
+		@extend %transition;
+	}
+	&:hover .feature-curve__text{
+		font-weight: 900;
+	}
+	.curve-line {
+		display: none;
+		transition: all 0.5s ease-in-out;
+		cursor: default;
+	}
+}
+.small-screen-curve {
+	display: none;
+}
+.curve {
+	padding: 0 20px;
+	position: relative;
+}
+.curve-item {
+	padding: 0 5%;
+	display: none;
+	@extend %transition;
+}
+.curve-btn {
+	position: absolute;
+	bottom: 60px;
+	left: 50%;
+	-webkit-transform: translateX(-50%);
+	   -moz-transform: translateX(-50%);
+	    -ms-transform: translateX(-50%);
+	     -o-transform: translateX(-50%);
+	        transform: translateX(-50%);
+	.primary-btn {
+		padding: 18px 50px;
+	}
+}
+.curve-item__container {
+	padding: 5%;
+	background: #F5F5F5;
+	box-shadow: 0 2px 10px 0 rgba(0,0,0,0.14);
+	border-radius: 4px 4px 0 4px 4px;
+}
+.curve-item__header {
+	font-size: 1.563em;
+	margin-bottom: 25px;
+}
+.curve-item__details {
+	font-size: 1.250em;
+	line-height: 28px;
+}
+#retrieve-info:target {
+	display: block;
+}
+#store-info:target {
+	display: block;
+}
+#prepare-info:target {
+	display: block;
+}
+#discover-info:target {
+	display: block;
+}
+#analyze-info:target {
+	display: block;
+}
+#visualize-info:target {
+	display: block;
+}
+#communicate-info:target {
+	display: block;
+}
+//====================================
+// About us
+//====================================
+
+.about {
+	padding-top: 100px;
+}
+.about-text {
+	padding: 80px 10% 0 10%;
+	font-size: 1.250em;
+	line-height: 28px;
+}
+
+//====================================
+// Plans and Pricing
+//====================================
+
+.plans {
+	padding-top: 100px;
+}
+.card-container {
+	margin-top: 70px;
+	padding: 0 30px;
+	display: flex;
+	justify-content: space-between;
+}
+.card {
+	height: 550px;
+	position: relative;
+	left: 0;
+	display: inline-block;
+}
+.card-background {
+	position: absolute;
+	bottom: 0;
+	z-index: -1;
+}
+.card-background1 {
+	left: -30px;
+}
+.card-background2 {
+	right: -30px;
+}
+.card__inner {
+	height: 550px;
+	background: #f5f5f5;
+	width: 390px;
+	position: relative;
+	box-shadow: 0 2px 4px 0 rgba(0,0,0,0.24);
+	border-radius: 4px;
+}
+.card__btn {
+	position: absolute;
+	width: 100%;
+	bottom: -23px;
+	.primary-btn {
+		padding: 17px 88px;
+	}
+}
+.content {
+	background: $hovering-color;
+	margin-top: 140px;
+	height: 800px;
+}
+
+
+@import "responsive";
