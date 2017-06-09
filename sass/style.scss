@@ -306,6 +306,7 @@
 }
 .signup-choices {
 	background: #EBEBEB;
+	display: none;
 }
 .signup-choice__list {
 	@extend %flex-between;
@@ -335,6 +336,83 @@
 	padding: 17px 102px;
 	&:active {
 		background: $accent-color;
+	}
+}
+.select-container {
+	display: none;
+}
+.input {
+	border: 1px solid $accent-color;
+	border-radius: 2px;
+	padding: 10px 6px;
+	font-size: 12px;
+	color: $font-color;
+	position: relative;
+}
+.select {
+	position: relative;
+	cursor: pointer;
+	width: 250px;
+	margin: 50px auto;
+	.input:after, .input:before {
+		content: '';
+		position: absolute;
+		left: calc(100% - 20px);
+		width: 0;
+		height: 0;
+		-webkit-transform: translateY(-50%);
+		   -moz-transform: translateY(-50%);
+		    -ms-transform: translateY(-50%);
+		     -o-transform: translateY(-50%);
+		        transform: translateY(-50%);
+	}
+	.input:before {
+		border-top: 5px solid $font-color;
+		border-left: 5px solid transparent;
+		border-right: 5px solid transparent;
+		top: 50%;
+	}
+	.input:after {
+		border-top: 5px solid #fff;
+		border-left: 5px solid transparent;
+		border-right: 5px solid transparent;
+		top: calc(50% - 1px);
+
+	}
+	.select__options {
+		border: 1px solid $accent-color;
+		position: relative;
+		width: 100%;
+		border-radius: 2px;
+		top: -22px;
+		left: 0;
+		padding-top: 30px;
+		// display: none;
+		&.visible {
+			display: block;
+		}
+		#itemList {
+			list-style: none;
+			padding: 0;
+			margin: 0;
+			li {
+				padding: 10px 6px 10px 6px;
+				text-align: center;
+				position: relative;
+				overflow: hidden;
+				&.select__item {
+					font-weight: 300;
+					color: $font-color;
+				}
+				&.selected {
+					color: $accent-color;
+					font-weight: 700;
+				}
+				&:hover {
+					color: $accent-color;
+				}
+			}
+		}
 	}
 }
 

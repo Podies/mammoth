@@ -5,7 +5,7 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<title>Mammoth Analytics</title>
-		<link href="https://fonts.googleapis.com/css?family=Lato:400,400i,700,700i,900" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Lato:300, 400,400i,700,700i,900" rel="stylesheet">
 		<link rel="icon" href="images/mammoth-icon.png" type="image/gif" sizes="16x16">
 
 		<!-- CSS -->
@@ -216,15 +216,21 @@
 							<li class="signup-choice__item">Improve my<br /> actual solution </li>
 							<li class="signup-choice__item active">I am drowning in<br /> data!</li>
 						</ul>
-						<!-- <div class="signup-choices__option text-center">
-							<select name="" id="input"  required="required">
-								<option value="I may need some help">I may need some help</option>
-								<option value="Interested in Data Analytic">Interested in Data Analytics</option>
-								<option value="Improve my actual solution">Improve my actual solution</option>
-								<option value="I am drowning in data!">I am drowning in data!</option>
-							</select>
-						</div> -->
 					</div>
+					<div class="select-container" id="list">
+							<div class="select">
+								<div class="input">
+								</div>
+								<div class="select__options">
+									<div id="itemList">
+										<li class="selected" onclick="toggleClass(this)">Interested in Data Analytics</li>
+										<li class="select__item" onclick="toggleClass(this)">I may need some help</li>
+										<li class="select__item" onclick="toggleClass(this)">Improve my actual solution</li>
+										<li class="select__item" onclick="toggleClass(this)">I am drowning in data!</li>
+									</div>
+								</div>
+							</div>
+						</div>
 					<div class="signup-input">
 						<div class="col-md-6 col-md-offset-3">
 							<div>
@@ -273,6 +279,15 @@
 			  }
 			  slides[slideIndex-1].style.display = "block"; 
 			  dots[slideIndex-1].className += " active";
+			}
+
+			function toggleClass(el) {
+				var kids = document.getElementById('itemList').children;
+
+				for(var i = 0; i < kids.length; i++) {
+					kids[i].className = "select__item";
+				}
+				el.className = "selected";
 			}
 		</script>
 	</body>

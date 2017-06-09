@@ -322,9 +322,12 @@
 	//====================================
 	// Signup Modal
 	//====================================
-
+	
 	.modal__logo {
 		width: 109px;
+	}
+	.signup-choices {
+		display: none;
 	}
 	.signup-ques {
 		font-size: 12px;
@@ -338,6 +341,10 @@
 		&:active {
 			background: $accent-color;
 		}
+	}
+
+	.select-container {
+		display: block;
 	}
 
 	//====================================
