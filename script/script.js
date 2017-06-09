@@ -32,3 +32,13 @@ window.onclick = function(event) {
       modal.style.display = "none";
   }
 }
+
+
+function toggleClass(el) {
+	var kids = document.getElementById('itemList').children;
+
+	for(var i = 0; i < kids.length; i++) {
+		kids[i].className = "select__item";
+	}
+	el.className = "selected";
+}
