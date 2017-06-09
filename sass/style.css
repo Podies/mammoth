@@ -800,69 +800,26 @@ input:focus {
     background: #56C28C; }
 
 .select-container {
+  text-align: center;
+  margin-top: 30px;
   display: none; }
 
-.input {
+.select__item-list {
+  position: relative;
+  padding: 10px 53px;
+  cursor: pointer;
+  border: none;
+  font-size: 12px;
   border: 1px solid #56C28C;
   border-radius: 2px;
-  padding: 10px 6px;
-  font-size: 12px;
-  color: #474847;
-  position: relative; }
-
-.select {
-  position: relative;
-  cursor: pointer;
-  width: 250px;
-  margin: 50px auto; }
-  .select .input:after, .select .input:before {
-    content: '';
-    position: absolute;
-    left: calc(100% - 20px);
-    width: 0;
-    height: 0;
-    -webkit-transform: translateY(-50%);
-    -moz-transform: translateY(-50%);
-    -ms-transform: translateY(-50%);
-    -o-transform: translateY(-50%);
-    transform: translateY(-50%); }
-  .select .input:before {
-    border-top: 5px solid #474847;
-    border-left: 5px solid transparent;
-    border-right: 5px solid transparent;
-    top: 50%; }
-  .select .input:after {
-    border-top: 5px solid #fff;
-    border-left: 5px solid transparent;
-    border-right: 5px solid transparent;
-    top: calc(50% - 1px); }
-  .select .select__options {
-    border: 1px solid #56C28C;
-    position: relative;
-    width: 100%;
-    border-radius: 2px;
-    top: -22px;
-    left: 0;
-    padding-top: 30px; }
-    .select .select__options.visible {
-      display: block; }
-    .select .select__options #itemList {
-      list-style: none;
-      padding: 0;
-      margin: 0; }
-      .select .select__options #itemList li {
-        padding: 10px 6px 10px 6px;
-        text-align: center;
-        position: relative;
-        overflow: hidden; }
-        .select .select__options #itemList li.select__item {
-          font-weight: 300;
-          color: #474847; }
-        .select .select__options #itemList li.selected {
-          color: #56C28C;
-          font-weight: 700; }
-        .select .select__options #itemList li:hover {
-          color: #56C28C; }
+  background: transparent;
+  background: url("../images/arrow.png") no-repeat;
+  background-position: 95% 15px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none; }
+  .select__item-list:focus {
+    outline: none; }
 
 .curve-cotainer {
   position: relative; }
