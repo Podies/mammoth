@@ -772,8 +772,7 @@ input:focus {
   margin-top: 30px; }
 
 .signup-choices {
-  background: #EBEBEB;
-  display: none; }
+  background: #EBEBEB; }
 
 .signup-choice__list {
   margin-top: 30px; }
@@ -1264,9 +1263,6 @@ input:focus {
   .signup-ques {
     font-size: 12px;
     margin-top: 30px; }
-
-  .signup-choice__list {
-    display: none; }
 
   .submit-btn {
     padding: 12px 60px; }
