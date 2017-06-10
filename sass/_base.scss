@@ -97,11 +97,12 @@ button {
   background: $accent-color;
   color: #fff;
   text-transform: capitalize;
-  font-size: 0.750em;
+  font-size: 15px;
+  font-weight: 700;
   letter-spacing: 0.09em;
   cursor: pointer;
   border-radius: 4px;
-  padding: 7px 21px;
+  padding: 8px 18px;
   @extend %transition;
   &:hover {
     background: $hovering-color;

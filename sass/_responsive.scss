@@ -57,6 +57,16 @@
 	// Header
 	//====================================
 
+	.nav__item{
+		&.nav__active {
+			&:after {
+				display: none;
+			}
+			&:hover {
+				color: $font-color;
+			}
+		}
+	}
 	.logo {
 		width: 140px;
 	}
@@ -285,7 +295,7 @@
 		margin-top: 15px;
 	}
 	.feature-btn {
-		padding: 12px 42px;
+		padding: 12px 50px;
 	}
 
 	//====================================
