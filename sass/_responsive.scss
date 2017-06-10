@@ -59,7 +59,9 @@
 
 	.nav__item{
 		&.nav__active {
-			border-bottom: 0;
+			&:after {
+				display: none;
+			}
 			&:hover {
 				color: $font-color;
 			}

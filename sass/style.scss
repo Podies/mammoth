@@ -25,12 +25,22 @@
 	font-size: 20px;
 	font-weight: 400;
 	padding: 10px 0 ;
+	position: relative;
 	@extend %transition;
 	&:hover {
 		color: $accent-color;
 	}
 	&.nav__active {
-		border-bottom: 4px solid $accent-color;
+		&:after {
+			content: '';
+			height: 4px;
+			width: 100%;
+			background: $accent-color;
+			position: absolute;
+			bottom: -5px;
+			left: 0;
+			z-index: 101;
+		}
 		&:hover {
 			color: $font-color;
 		}
