@@ -8,7 +8,7 @@
 .header{
 	background: #FDFDFD;
 	opacity: 0.9;
-	padding: 20px;
+	padding: 10px 20px;
 	position: fixed;
 	width: 100%;
 	z-index: 100;
@@ -55,6 +55,9 @@
 	max-height: 957px;
 	height: 100%;
 	position: relative;
+	.heading-text {
+		font-weight: 900;
+	}
 }
 .small-screen-img {
 	display: none;
@@ -75,6 +78,7 @@
 	padding: 17px 58px;
 	font-size: 1.375em;
 	bottom: 8%;
+	margin-left: 20px;
 }
 
 //====================================
@@ -91,13 +95,14 @@
 	line-height: 49px;
 }
 .features__list {
-	padding: 110px 0;
+	padding: 90px 0;
 }
 .feature__title {
 	color: $title-color2;
-	font-size: 2.188em;
+	font-size: 1.250em;
 	line-height: 28px;
 	margin-top: 37px;
+	font-weight: 700;
 }
 .feature__title2 {
 	margin-top: 51px;

@@ -526,7 +526,7 @@ input:focus {
 .header {
   background: #FDFDFD;
   opacity: 0.9;
-  padding: 20px;
+  padding: 10px 20px;
   position: fixed;
   width: 100%;
   z-index: 100;
@@ -557,6 +557,8 @@ input:focus {
   max-height: 957px;
   height: 100%;
   position: relative; }
+  .hero__section .heading-text {
+    font-weight: 900; }
 
 .small-screen-img {
   display: none; }
@@ -576,7 +578,8 @@ input:focus {
   position: absolute;
   padding: 17px 58px;
   font-size: 1.375em;
-  bottom: 8%; }
+  bottom: 8%;
+  margin-left: 20px; }
 
 .features {
   padding: 70px; }
@@ -588,13 +591,14 @@ input:focus {
   line-height: 49px; }
 
 .features__list {
-  padding: 110px 0; }
+  padding: 90px 0; }
 
 .feature__title {
   color: #56C28C;
-  font-size: 2.188em;
+  font-size: 1.250em;
   line-height: 28px;
-  margin-top: 37px; }
+  margin-top: 37px;
+  font-weight: 700; }
 
 .feature__title2 {
   margin-top: 51px; }
@@ -1087,18 +1091,27 @@ input:focus {
   #toggle:checked ~ .logo-container .mammoth-logo {
     fill: #fff; }
 
+  .primary-btn {
+    font-size: 15px; }
+
   .hero__background {
     display: none; }
 
   .hero__section {
     padding-top: 100px; }
+    .hero__section .heading-text {
+      color: #1D3C29;
+      font-size: 25px;
+      line-height: 35px;
+      font-weight: 700; }
 
   .hero .grid {
     position: relative;
     padding: 0; }
 
   .small-screen-img {
-    display: inline-block; }
+    display: inline-block;
+    margin-top: 30px; }
 
   .data-icons {
     margin-top: 30px; }
@@ -1107,11 +1120,12 @@ input:focus {
     color: #1D3C29;
     font-size: 25px;
     line-height: 35px;
-    font-weight: 900; }
+    font-weight: 700; }
 
   .subhead-text {
     font-size: 20px;
-    line-height: 28px; }
+    line-height: 28px;
+    font-weight: 300; }
 
   .insights {
     padding-top: 0px; }
@@ -1119,7 +1133,8 @@ input:focus {
       width: 100%;
       height: 650px; }
     .insights .heading-text {
-      color: #fff; }
+      color: #fff;
+      font-weight: 400; }
     .insights .hero__header {
       position: absolute;
       top: 80px;
@@ -1144,7 +1159,9 @@ input:focus {
       position: absolute;
       width: 100%;
       left: 50%;
-      font-size: 16px;
+      margin-top: 25px;
+      font-weight: 700;
+      font-size: 15px;
       line-height: 22.4px;
       color: #fff;
       -webkit-transform: translateX(-50%);
@@ -1194,7 +1211,8 @@ input:focus {
 
   .dot {
     width: 10px;
-    height: 10px; }
+    height: 10px;
+    margin: 0 6px; }
 
   .footer__img {
     width: 61px; }
