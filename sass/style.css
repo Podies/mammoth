@@ -1024,6 +1024,11 @@ input:focus {
     .nav__item.login-btn {
       margin-right: 0; } }
 @media all and (max-width: 768px) {
+  .nav__item.nav__active {
+    border-bottom: 0; }
+    .nav__item.nav__active:hover {
+      color: #474847; }
+
   .logo {
     width: 140px; }
 

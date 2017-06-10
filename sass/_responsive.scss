@@ -57,6 +57,14 @@
 	// Header
 	//====================================
 
+	.nav__item{
+		&.nav__active {
+			border-bottom: 0;
+			&:hover {
+				color: $font-color;
+			}
+		}
+	}
 	.logo {
 		width: 140px;
 	}
