@@ -99,10 +99,10 @@ button {
   text-transform: capitalize;
   font-size: 15px;
   font-weight: 700;
-  letter-spacing: 0.09em;
+  // letter-spacing: 0.09em;
   cursor: pointer;
   border-radius: 4px;
-  padding: 8px 18px;
+  padding: 8px 25px;
   @extend %transition;
   &:hover {
     background: $hovering-color;
