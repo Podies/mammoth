@@ -527,7 +527,7 @@ input:focus {
 .header {
   background: #FDFDFD;
   opacity: 0.9;
-  padding: 0 20px;
+  padding: 10px 20px;
   position: fixed;
   width: 100%;
   z-index: 100;
@@ -537,7 +537,6 @@ input:focus {
   margin-right: 50px;
   font-size: 20px;
   font-weight: 400;
-  padding: 10px 0;
   position: relative; }
   .nav__item:hover {
     color: #56C28C; }
@@ -547,7 +546,7 @@ input:focus {
     width: 100%;
     background: #56C28C;
     position: absolute;
-    bottom: -5px;
+    bottom: -18px;
     left: 0;
     z-index: 101; }
   .nav__item.nav__active:hover {
