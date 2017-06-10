@@ -503,10 +503,9 @@ button {
   text-transform: capitalize;
   font-size: 15px;
   font-weight: 700;
-  letter-spacing: 0.09em;
   cursor: pointer;
   border-radius: 4px;
-  padding: 8px 18px; }
+  padding: 8px 25px; }
   .primary-btn:hover {
     background: #83D3AA; }
 
@@ -560,14 +559,14 @@ input:focus {
 .hero {
   position: relative; }
   .hero .grid {
-    max-height: 957px;
+    max-height: 800px;
     height: 100%;
     position: absolute;
     top: 0; }
 
 .hero__section {
   padding-top: 126px;
-  max-height: 957px;
+  max-height: 800px;
   height: 100%;
   position: relative; }
 
@@ -589,10 +588,10 @@ input:focus {
 
 .hero__btn {
   position: absolute;
-  padding: 18px 57px;
+  padding: 18px 68px;
   font-size: 22px;
   font-weight: 700;
-  bottom: 8%;
+  bottom: 5.5%;
   margin-left: 20px; }
 
 .features {
@@ -628,7 +627,7 @@ input:focus {
   margin-top: 10px; }
 
 .feature-btn {
-  padding: 12px 40px;
+  padding: 12px 49px;
   font-size: 20px;
   font-weight: 700; }
 
@@ -829,7 +828,7 @@ input:focus {
 .submit-btn {
   margin-top: 30px;
   background: #E6E6E6;
-  padding: 18px 83px;
+  padding: 18px 89px;
   font-size: 22px;
   font-weight: 700; }
   .submit-btn:active {
@@ -893,7 +892,7 @@ input:focus {
   -o-transform: translateX(-50%);
   transform: translateX(-50%); }
   .curve-btn .primary-btn {
-    padding: 16px 37px;
+    padding: 16px 47px;
     font-size: 24px;
     font-weight: 700; }
 
@@ -982,7 +981,7 @@ input:focus {
   width: 100%;
   bottom: -23px; }
   .card__btn .primary-btn {
-    padding: 18px 57px;
+    padding: 18px 68px;
     font-size: 22px;
     font-weight: 700; }
 
@@ -1193,7 +1192,7 @@ input:focus {
     margin-top: 30px;
     margin-bottom: 30px;
     position: relative;
-    padding: 12px 42px;
+    padding: 11px 52px;
     font-size: 16px; }
 
   .features {
@@ -1238,7 +1237,7 @@ input:focus {
     margin-top: 15px; }
 
   .feature-btn {
-    padding: 12px 50px; }
+    padding: 11px 56px; }
 
   .carousel {
     padding: 30px; }

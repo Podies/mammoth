@@ -59,7 +59,7 @@
 .hero {
   position: relative;
   .grid {
-  	max-height: 957px;
+  	max-height: 800px;
 		height: 100%;
   	position: absolute;
   	top: 0;
@@ -67,7 +67,7 @@
 }
 .hero__section {
 	padding-top: 126px;
-	max-height: 957px;
+	max-height: 800px;
 	height: 100%;
 	position: relative;
 }
@@ -89,10 +89,10 @@
 }
 .hero__btn {
 	position: absolute;
-	padding: 18px 57px;
+	padding: 18px 68px;
 	font-size: 22px;
 	font-weight: 700;
-	bottom: 8%;
+	bottom: 5.5%;
 	margin-left: 20px;
 }
 
@@ -133,7 +133,7 @@
 	margin-top: 10px;
 }
 .feature-btn {
-	padding: 12px 40px;
+	padding: 12px 49px;
 	font-size: 20px;
 	font-weight: 700;
 }
@@ -369,7 +369,7 @@
 .submit-btn {
 	margin-top: 30px;
 	background: #E6E6E6;
-	padding: 18px 83px;
+	padding: 18px 89px;
 	font-size: 22px;
 	font-weight: 700;
 	&:active {
@@ -447,7 +447,7 @@
 	     -o-transform: translateX(-50%);
 	        transform: translateX(-50%);
 	.primary-btn {
-		padding: 16px 37px;
+		padding: 16px 47px;
 		font-size: 24px;
 		font-weight: 700;
 	}
@@ -546,7 +546,7 @@
 	width: 100%;
 	bottom: -23px;
 	.primary-btn {
-		padding: 18px 57px;
+		padding: 18px 68px;
 		font-size: 22px;
 		font-weight: 700;
 	}
