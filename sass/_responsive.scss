@@ -169,11 +169,20 @@
 	//====================================
 	// Hero Section
 	//====================================
+	.primary-btn {
+		font-size: 15px;
+	}
 	.hero__background {
 		display: none;
 	}
 	.hero__section {
 		padding-top: 100px;
+		.heading-text {
+			color: $heading-color;
+			font-size: 25px;
+			line-height: 35px;
+			font-weight: 700;
+		}
 	}
 	.hero {
 	  .grid {
@@ -183,6 +192,7 @@
 	}
 	.small-screen-img {
 		display: inline-block;
+		margin-top: 30px;
 	}
 	.data-icons {
 		margin-top: 30px;
@@ -191,11 +201,12 @@
 		color: $heading-color;
 		font-size: 25px;
 		line-height: 35px;
-		font-weight: 900;
+		font-weight: 700;
 	}
 	.subhead-text {
 		font-size: 20px;
 		line-height: 28px;
+		font-weight: 300;
 	}
 	.insights {
 		padding-top: 0px;
@@ -205,6 +216,7 @@
 		}
 		.heading-text {
 			color: #fff;
+			font-weight: 400;
 		}
 		.hero__header {
 			position: absolute;
@@ -237,7 +249,9 @@
 			position: absolute;
 			width: 100%;
 			left: 50%;
-			font-size: 16px;
+			margin-top: 25px;
+			font-weight: 700;
+			font-size: 15px;
 			line-height: 22.4px;
 			color: #fff;
 			-webkit-transform: translateX(-50%);
@@ -296,6 +310,7 @@
 	.dot {
 	  width: 10px;
 	  height: 10px;
+	  margin: 0 6px;
 	}
 	//====================================
 	// Footer Section
@@ -332,9 +347,6 @@
 	.signup-ques {
 		font-size: 12px;
 		margin-top: 30px;
-	}
-	.signup-choice__list {
-		display: none;
 	}
 	.submit-btn {
 		padding: 12px 60px;

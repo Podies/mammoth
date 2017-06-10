@@ -526,7 +526,7 @@ input:focus {
 .header {
   background: #FDFDFD;
   opacity: 0.9;
-  padding: 20px;
+  padding: 10px 20px;
   position: fixed;
   width: 100%;
   z-index: 100;
@@ -557,6 +557,8 @@ input:focus {
   max-height: 957px;
   height: 100%;
   position: relative; }
+  .hero__section .heading-text {
+    font-weight: 900; }
 
 .small-screen-img {
   display: none; }
@@ -576,7 +578,8 @@ input:focus {
   position: absolute;
   padding: 17px 58px;
   font-size: 1.375em;
-  bottom: 8%; }
+  bottom: 8%;
+  margin-left: 20px; }
 
 .features {
   padding: 70px; }
@@ -588,13 +591,14 @@ input:focus {
   line-height: 49px; }
 
 .features__list {
-  padding: 110px 0; }
+  padding: 90px 0; }
 
 .feature__title {
   color: #56C28C;
-  font-size: 2.188em;
+  font-size: 1.250em;
   line-height: 28px;
-  margin-top: 37px; }
+  margin-top: 37px;
+  font-weight: 700; }
 
 .feature__title2 {
   margin-top: 51px; }
@@ -772,8 +776,7 @@ input:focus {
   margin-top: 30px; }
 
 .signup-choices {
-  background: #EBEBEB;
-  display: none; }
+  background: #EBEBEB; }
 
 .signup-choice__list {
   margin-top: 30px; }
@@ -801,69 +804,26 @@ input:focus {
     background: #56C28C; }
 
 .select-container {
+  text-align: center;
+  margin-top: 30px;
   display: none; }
 
-.input {
+.select__item-list {
+  position: relative;
+  padding: 10px 53px;
+  cursor: pointer;
+  border: none;
+  font-size: 12px;
   border: 1px solid #56C28C;
   border-radius: 2px;
-  padding: 10px 6px;
-  font-size: 12px;
-  color: #474847;
-  position: relative; }
-
-.select {
-  position: relative;
-  cursor: pointer;
-  width: 250px;
-  margin: 50px auto; }
-  .select .input:after, .select .input:before {
-    content: '';
-    position: absolute;
-    left: calc(100% - 20px);
-    width: 0;
-    height: 0;
-    -webkit-transform: translateY(-50%);
-    -moz-transform: translateY(-50%);
-    -ms-transform: translateY(-50%);
-    -o-transform: translateY(-50%);
-    transform: translateY(-50%); }
-  .select .input:before {
-    border-top: 5px solid #474847;
-    border-left: 5px solid transparent;
-    border-right: 5px solid transparent;
-    top: 50%; }
-  .select .input:after {
-    border-top: 5px solid #fff;
-    border-left: 5px solid transparent;
-    border-right: 5px solid transparent;
-    top: calc(50% - 1px); }
-  .select .select__options {
-    border: 1px solid #56C28C;
-    position: relative;
-    width: 100%;
-    border-radius: 2px;
-    top: -22px;
-    left: 0;
-    padding-top: 30px; }
-    .select .select__options.visible {
-      display: block; }
-    .select .select__options #itemList {
-      list-style: none;
-      padding: 0;
-      margin: 0; }
-      .select .select__options #itemList li {
-        padding: 10px 6px 10px 6px;
-        text-align: center;
-        position: relative;
-        overflow: hidden; }
-        .select .select__options #itemList li.select__item {
-          font-weight: 300;
-          color: #474847; }
-        .select .select__options #itemList li.selected {
-          color: #56C28C;
-          font-weight: 700; }
-        .select .select__options #itemList li:hover {
-          color: #56C28C; }
+  background: transparent;
+  background: url("../images/arrow.png") no-repeat;
+  background-position: 95% 15px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none; }
+  .select__item-list:focus {
+    outline: none; }
 
 .curve-cotainer {
   position: relative; }
@@ -1131,18 +1091,27 @@ input:focus {
   #toggle:checked ~ .logo-container .mammoth-logo {
     fill: #fff; }
 
+  .primary-btn {
+    font-size: 15px; }
+
   .hero__background {
     display: none; }
 
   .hero__section {
     padding-top: 100px; }
+    .hero__section .heading-text {
+      color: #1D3C29;
+      font-size: 25px;
+      line-height: 35px;
+      font-weight: 700; }
 
   .hero .grid {
     position: relative;
     padding: 0; }
 
   .small-screen-img {
-    display: inline-block; }
+    display: inline-block;
+    margin-top: 30px; }
 
   .data-icons {
     margin-top: 30px; }
@@ -1151,11 +1120,12 @@ input:focus {
     color: #1D3C29;
     font-size: 25px;
     line-height: 35px;
-    font-weight: 900; }
+    font-weight: 700; }
 
   .subhead-text {
     font-size: 20px;
-    line-height: 28px; }
+    line-height: 28px;
+    font-weight: 300; }
 
   .insights {
     padding-top: 0px; }
@@ -1163,7 +1133,8 @@ input:focus {
       width: 100%;
       height: 650px; }
     .insights .heading-text {
-      color: #fff; }
+      color: #fff;
+      font-weight: 400; }
     .insights .hero__header {
       position: absolute;
       top: 80px;
@@ -1188,7 +1159,9 @@ input:focus {
       position: absolute;
       width: 100%;
       left: 50%;
-      font-size: 16px;
+      margin-top: 25px;
+      font-weight: 700;
+      font-size: 15px;
       line-height: 22.4px;
       color: #fff;
       -webkit-transform: translateX(-50%);
@@ -1238,7 +1211,8 @@ input:focus {
 
   .dot {
     width: 10px;
-    height: 10px; }
+    height: 10px;
+    margin: 0 6px; }
 
   .footer__img {
     width: 61px; }
@@ -1264,9 +1238,6 @@ input:focus {
   .signup-ques {
     font-size: 12px;
     margin-top: 30px; }
-
-  .signup-choice__list {
-    display: none; }
 
   .submit-btn {
     padding: 12px 60px; }
