@@ -876,7 +876,8 @@ input:focus {
 
 .curve {
   padding: 0 20px;
-  position: relative; }
+  position: relative;
+  margin-top: -80px; }
 
 .curve-item {
   padding: 0 5%;
