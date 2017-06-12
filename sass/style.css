@@ -16,6 +16,7 @@
   clear: both; }
 
 .col {
+  /* margin: 16px;*/
   padding: 25px; }
 
 .pad {
@@ -25,6 +26,7 @@
   width: 100%;
   min-height: 1px;
   float: left;
+  -webkit-box-sizing: border-box;
   box-sizing: border-box; }
 
 @media all and (min-width: 1100px) {
@@ -387,6 +389,12 @@
 
   .col-xs-offset-12 {
     margin-left: 100%; } }
+/*====================================*/
+/*Variables*/
+/*====================================*/
+/*====================================*/
+/* Mixins*/
+/*====================================*/
 .nav, .nav__item-list, .signup-choice__list {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -399,6 +407,7 @@
   align-items: center; }
 
 .primary-btn, .nav__item, .remove-btn .close-btn #close-btn, .signup-choice__item, .feature-curve__item .feature-curve__text, .curve-item {
+  -webkit-transition: all 250ms ease-in-out;
   transition: all 250ms ease-in-out; }
 
 html, body, div, span, applet, object, iframe,
@@ -422,6 +431,7 @@ time, mark, audio, video {
   vertical-align: baseline; }
 
 *, html, body {
+  -webkit-box-sizing: border-box;
   box-sizing: border-box; }
 
 h1 {
@@ -503,6 +513,7 @@ button {
   text-transform: capitalize;
   font-size: 15px;
   font-weight: 700;
+  /* letter-spacing: 0.09em;*/
   cursor: pointer;
   border-radius: 4px;
   padding: 8px 25px; }
@@ -523,6 +534,9 @@ input:focus {
   border-bottom: 1px solid #BCBCBC;
   text-align: center; }
 
+/*====================================*/
+/* Primary Header*/
+/*====================================*/
 .header {
   background: #FDFDFD;
   opacity: 0.9;
@@ -530,6 +544,7 @@ input:focus {
   position: fixed;
   width: 100%;
   z-index: 100;
+  -webkit-box-shadow: 0px 2px 4px 0 rgba(0, 0, 0, 0.12);
   box-shadow: 0px 2px 4px 0 rgba(0, 0, 0, 0.12); }
 
 .nav__item {
@@ -556,6 +571,9 @@ input:focus {
     .nav__item.login-btn:hover {
       color: #474847; }
 
+/*====================================*/
+/* Hero Section*/
+/*====================================*/
 .hero {
   position: relative; }
   .hero .grid {
@@ -594,6 +612,9 @@ input:focus {
   bottom: 5.5%;
   margin-left: 20px; }
 
+/*====================================*/
+/* Features Section*/
+/*====================================*/
 .features {
   padding: 67px 0 75px 0; }
 
@@ -631,6 +652,9 @@ input:focus {
   font-size: 20px;
   font-weight: 700; }
 
+/*====================================*/
+/* Carousel Section*/
+/*====================================*/
 .carousel {
   background: #f4f4f4;
   padding: 70px 0 64px 0; }
@@ -652,15 +676,23 @@ input:focus {
   display: none; }
 
 .carousel__nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   margin-top: 30px; }
 
 .prev, .next {
   cursor: pointer;
+  /* width: auto;*/
   color: #1d3c29;
   font-size: 30px;
+  -webkit-transition: 0.6s ease;
   transition: 0.6s ease; }
   .prev:hover, .next:hover {
     color: #56c28c; }
@@ -695,6 +727,7 @@ input:focus {
   margin: 0 22.4px;
   border-radius: 50%;
   display: inline-block;
+  -webkit-transition: background-color 0.6s ease;
   transition: background-color 0.6s ease; }
 
 .active, .dot:hover {
@@ -716,6 +749,9 @@ input:focus {
     opacity: .4; }
   to {
     opacity: 1; } }
+/*====================================*/
+/* Footer Section*/
+/*====================================*/
 .contact {
   padding: 120px 0 80px 0; }
 
@@ -732,6 +768,9 @@ input:focus {
     font-size: 20px;
     font-weight: 400; }
 
+/*====================================*/
+/* Signup Modal*/
+/*====================================*/
 .modal {
   display: none;
   /* Hidden by default */
@@ -762,11 +801,9 @@ input:focus {
   top: 116px;
   background: #FFFFFF;
   border-radius: 4.4px;
+  -webkit-box-shadow: 0 0 8px rgba(0, 0, 0, 0.4);
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.4);
   -webkit-transform: translateX(-50%);
-  -moz-transform: translateX(-50%);
-  -ms-transform: translateX(-50%);
-  -o-transform: translateX(-50%);
   transform: translateX(-50%); }
 
 .remove-btn {
@@ -810,12 +847,15 @@ input:focus {
   padding: 11px 30px;
   font-size: 14px;
   font-weight: 300;
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
   flex-grow: 1;
   cursor: pointer;
   border: 1px solid #EBEBEB; }
   .signup-choice__item:hover, .signup-choice__item.active {
     background: #fff;
     font-weight: 700;
+    -webkit-box-shadow: 0 0 1px rgba(0, 0, 0, 0.4);
     box-shadow: 0 0 1px rgba(0, 0, 0, 0.4); }
 
 .signup-input {
@@ -856,18 +896,22 @@ input:focus {
   .select__item-list:focus {
     outline: none; }
 
+/*====================================*/
+/* Product and Features*/
+/*====================================*/
 .curve-cotainer {
   position: relative; }
 
 .curve-header {
   position: absolute;
-  top: 100px;
+  top: 85px;
   width: 100%; }
 
 .feature-curve__item:hover .feature-curve__text {
   font-weight: 900; }
 .feature-curve__item .curve-line {
   display: none;
+  -webkit-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
   cursor: default; }
 
@@ -888,9 +932,6 @@ input:focus {
   bottom: 60px;
   left: 50%;
   -webkit-transform: translateX(-50%);
-  -moz-transform: translateX(-50%);
-  -ms-transform: translateX(-50%);
-  -o-transform: translateX(-50%);
   transform: translateX(-50%); }
   .curve-btn .primary-btn {
     padding: 16px 47px;
@@ -900,6 +941,7 @@ input:focus {
 .curve-item__container {
   padding: 5%;
   background: #F5F5F5;
+  -webkit-box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.14);
   box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.14);
   border-radius: 4px 4px 0 4px 4px; }
 
@@ -913,29 +955,11 @@ input:focus {
   line-height: 28px;
   font-weight: 400; }
 
-#retrieve-info:target {
-  display: block; }
-
-#store-info:target {
-  display: block; }
-
-#prepare-info:target {
-  display: block; }
-
-#discover-info:target {
-  display: block; }
-
-#analyze-info:target {
-  display: block; }
-
-#visualize-info:target {
-  display: block; }
-
-#communicate-info:target {
-  display: block; }
-
+/*====================================*/
+/* About us*/
+/*====================================*/
 .about {
-  padding-top: 100px; }
+  padding-top: 85px; }
 
 .about-text {
   padding: 80px 10% 0 10%;
@@ -943,13 +967,20 @@ input:focus {
   font-weight: 400;
   line-height: 28px; }
 
+/*====================================*/
+/* Plans and Pricing*/
+/*====================================*/
 .plans {
-  padding-top: 100px; }
+  padding-top: 85px; }
 
 .card-container {
   margin-top: 70px;
   padding: 0 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between; }
 
 .card {
@@ -974,6 +1005,7 @@ input:focus {
   background: #f5f5f5;
   width: 390px;
   position: relative;
+  -webkit-box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.24);
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.24);
   border-radius: 4px; }
 
@@ -998,9 +1030,6 @@ input:focus {
   .hero__btn {
     left: 50%;
     -webkit-transform: translateX(-50%);
-    -moz-transform: translateX(-50%);
-    -ms-transform: translateX(-50%);
-    -o-transform: translateX(-50%);
     transform: translateX(-50%); } }
 @media all and (max-width: 1240px) {
   .heading-text {
@@ -1031,6 +1060,9 @@ input:focus {
     .nav__item.login-btn {
       margin-right: 0; } }
 @media all and (max-width: 768px) {
+  /*====================================*/
+  /* Header*/
+  /*====================================*/
   .nav__item.nav__active:after {
     display: none; }
   .nav__item.nav__active:hover {
@@ -1040,6 +1072,8 @@ input:focus {
     width: 140px; }
 
   .logo-container {
+    -webkit-box-ordinal-group: 0;
+    -ms-flex-order: -1;
     order: -1; }
 
   .hamburger-icon {
@@ -1050,10 +1084,9 @@ input:focus {
     transition: all 0.3s ease-in-out;
     margin-bottom: 8px; }
 
-  #myBtn {
-    display: none; }
-
   .nav__item.login-btn {
+    display: none; }
+  .nav__item .primary-btn {
     display: none; }
 
   .menu-icon {
@@ -1135,6 +1168,9 @@ input:focus {
   #toggle:checked ~ .logo-container .mammoth-logo {
     fill: #fff; }
 
+  /*====================================*/
+  /* Hero Section*/
+  /*====================================*/
   .primary-btn {
     font-size: 15px; }
 
@@ -1142,7 +1178,7 @@ input:focus {
     display: none; }
 
   .hero__section {
-    padding-top: 100px; }
+    padding-top: 79px; }
     .hero__section .heading-text {
       color: #1D3C29;
       font-size: 25px;
@@ -1184,9 +1220,6 @@ input:focus {
       top: 80px;
       left: 50%;
       -webkit-transform: translateX(-50%);
-      -moz-transform: translateX(-50%);
-      -ms-transform: translateX(-50%);
-      -o-transform: translateX(-50%);
       transform: translateX(-50%); }
 
   .hero__btn {
@@ -1196,6 +1229,9 @@ input:focus {
     padding: 11px 52px;
     font-size: 16px; }
 
+  /*====================================*/
+  /* feature Section*/
+  /*====================================*/
   .features {
     padding: 0px;
     padding-bottom: 70px;
@@ -1211,9 +1247,6 @@ input:focus {
       line-height: 22.4px;
       color: #fff;
       -webkit-transform: translateX(-50%);
-      -moz-transform: translateX(-50%);
-      -ms-transform: translateX(-50%);
-      -o-transform: translateX(-50%);
       transform: translateX(-50%); }
 
   .title-text {
@@ -1242,6 +1275,9 @@ input:focus {
   .feature-btn {
     padding: 11px 56px; }
 
+  /*====================================*/
+  /* Carousel Section*/
+  /*====================================*/
   .carousel {
     padding: 30px; }
 
@@ -1260,6 +1296,9 @@ input:focus {
     height: 10px;
     margin: 0 6px; }
 
+  /*====================================*/
+  /* Footer Section*/
+  /*====================================*/
   .footer__img {
     width: 61px; }
 
@@ -1275,6 +1314,9 @@ input:focus {
     .copyright-text h5 {
       font-size: 10px; }
 
+  /*====================================*/
+  /* Signup Modal*/
+  /*====================================*/
   .modal__logo {
     width: 109px; }
 
@@ -1293,6 +1335,9 @@ input:focus {
   .select-container {
     display: block; }
 
+  /*====================================*/
+  /* Product and Features*/
+  /*====================================*/
   .large-screen-curve {
     display: none; }
 
@@ -1300,20 +1345,20 @@ input:focus {
     display: inline-block;
     max-width: 500px;
     width: 100%;
-    margin-top: 40px; }
+    margin-top: 120px; }
 
   .curve-btn {
     display: none; }
 
   .curve-header {
     position: static;
-    padding-top: 126px; }
+    padding-top: 89px; }
 
   .curve__background {
     display: none; }
 
   .feature-curve__item:hover .feature-curve__text {
-    font-weight: 400;
+    font-weight: 900;
     fill: #1D3C29; }
 
   .curve-item__header {
@@ -1325,6 +1370,12 @@ input:focus {
     font-size: 12px;
     line-height: 18px; }
 
+  /*====================================*/
+  /* Plans and Pricing*/
+  /*====================================*/
+  .plans {
+    padding-top: 89px; }
+
   .col {
     padding: 16px; }
 
@@ -1333,6 +1384,9 @@ input:focus {
 
   .card-background {
     display: none; }
+
+  .card {
+    /* height: 330px;*/ }
 
   .card__inner {
     height: 330px;
@@ -1344,8 +1398,11 @@ input:focus {
   .content {
     display: none; }
 
+  /*====================================*/
+  /* About us*/
+  /*====================================*/
   .about {
-    padding-top: 126px; }
+    padding-top: 89px; }
 
   .about-text {
     padding: 30px 6% 0 6%;

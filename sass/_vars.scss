@@ -1,6 +1,6 @@
-//====================================
-//Variables
-//====================================
+/*====================================*/
+/*Variables*/
+/*====================================*/
 
 $font-color: #474847;
 $heading-color: #1D3C29;
@@ -9,9 +9,9 @@ $hovering-color: #83D3AA;
 $title-color: #1D3C29;
 $title-color2: #56C28C;
 
-//====================================
-// Mixins
-//====================================
+/*====================================*/
+/* Mixins*/
+/*====================================*/
 
 @mixin clearfix {
   *zoom: 1;
@@ -39,7 +39,8 @@ $title-color2: #56C28C;
 }
 
 %transition{
-	transition: all 250ms ease-in-out;
+  -webkit-transition: all 250ms ease-in-out;
+  transition: all 250ms ease-in-out;
 }
 
 %center {
@@ -47,8 +48,5 @@ $title-color2: #56C28C;
   top: 50%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
-     -moz-transform: translate(-50%, -50%);
-      -ms-transform: translate(-50%, -50%);
-       -o-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
 }
