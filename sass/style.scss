@@ -8,7 +8,7 @@
 .header{
 	background: #FDFDFD;
 	opacity: 0.9;
-	padding: 10px 20px;
+	padding: 4.5px 20px;
 	position: fixed;
 	width: 100%;
 	z-index: 100;
@@ -21,8 +21,8 @@
 	@extend %flex-between;
 }
 .nav__item{
-	margin-right: 50px;
-	font-size: 20px;
+	margin-right: 45px;
+	font-size: 15px;
 	font-weight: 400;
 	position: relative;
 	@extend %transition;
@@ -66,7 +66,7 @@
   }
 }
 .hero__section {
-	padding-top: 126px;
+	padding-top: 85px;
 	max-height: 800px;
 	height: 100%;
 	position: relative;
@@ -89,7 +89,7 @@
 }
 .hero__btn {
 	position: absolute;
-	padding: 18px 68px;
+	padding: 12px 35.5px;
 	font-size: 22px;
 	font-weight: 700;
 	bottom: 5.5%;
@@ -213,7 +213,7 @@
   width: 14.4px;
   height: 14.4px;
   background-color: #1d3c29;
-  margin: 0 22px;
+  margin: 0 22.4px;
   border-radius: 50%;
   display: inline-block;
   transition: background-color 0.6s ease;
