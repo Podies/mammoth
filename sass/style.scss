@@ -1,9 +1,9 @@
 @import "grid";
 @import "base";
 
-//====================================
-// Primary Header
-//====================================
+/*====================================*/
+/* Primary Header*/
+/*====================================*/
 
 .header{
 	background: #FDFDFD;
@@ -12,7 +12,8 @@
 	position: fixed;
 	width: 100%;
 	z-index: 100;
-	box-shadow: 0px 2px 4px 0 rgba(0, 0, 0,0.12);
+	-webkit-box-shadow: 0px 2px 4px 0 rgba(0, 0, 0,0.12);
+	        box-shadow: 0px 2px 4px 0 rgba(0, 0, 0,0.12);
 }
 .nav {
 	@extend %flex-between;
@@ -53,9 +54,9 @@
 	}
 }
 
-//====================================
-// Hero Section
-//====================================
+/*====================================*/
+/* Hero Section*/
+/*====================================*/
 .hero {
   position: relative;
   .grid {
@@ -96,9 +97,9 @@
 	margin-left: 20px;
 }
 
-//====================================
-// Features Section
-//====================================
+/*====================================*/
+/* Features Section*/
+/*====================================*/
 
 .features {
 	padding: 67px 0 75px 0;
@@ -139,9 +140,9 @@
 }
 
 
-//====================================
-// Carousel Section
-//====================================
+/*====================================*/
+/* Carousel Section*/
+/*====================================*/
 
 .carousel {
 	background: #f4f4f4;
@@ -167,16 +168,23 @@
     display: none;
 }
 .carousel__nav {
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	justify-content: center;
-	align-items: center;
+	-webkit-box-pack: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
 	margin-top: 30px;
 }
 .prev, .next {
   cursor: pointer;
-  // width: auto;
+  /* width: auto;*/
   color: #1d3c29;
   font-size: 30px;
+  -webkit-transition: 0.6s ease;
   transition: 0.6s ease;
   &:hover {
   	color: #56c28c;
@@ -216,6 +224,7 @@
   margin: 0 22.4px;
   border-radius: 50%;
   display: inline-block;
+  -webkit-transition: background-color 0.6s ease;
   transition: background-color 0.6s ease;
 }
 
@@ -241,9 +250,9 @@
 }
 
 
-//====================================
-// Footer Section
-//====================================
+/*====================================*/
+/* Footer Section*/
+/*====================================*/
 
 .contact {
 	padding: 120px 0 80px 0;
@@ -264,9 +273,9 @@
 	}
 }
 
-//====================================
-// Signup Modal
-//====================================
+/*====================================*/
+/* Signup Modal*/
+/*====================================*/
 
 .modal {
 	display: none; /* Hidden by default */
@@ -292,11 +301,9 @@
 	top:116px;
 	background: #FFFFFF;
 	border-radius: 4.4px;
-	box-shadow: 0 0 8px rgba(0, 0, 0, 0.4);
+	-webkit-box-shadow: 0 0 8px rgba(0, 0, 0, 0.4);
+	        box-shadow: 0 0 8px rgba(0, 0, 0, 0.4);
 	-webkit-transform: translateX(-50%);
-	   -moz-transform: translateX(-50%);
-	    -ms-transform: translateX(-50%);
-	     -o-transform: translateX(-50%);
 	        transform: translateX(-50%);
 }
 .remove-btn{
@@ -348,14 +355,17 @@
 	padding: 11px 30px;
 	font-size: 14px;
 	font-weight: 300;
-	flex-grow: 1;
+	-webkit-box-flex: 1;
+	    -ms-flex-positive: 1;
+	        flex-grow: 1;
 	@extend %transition;
 	cursor: pointer;
 	border: 1px solid #EBEBEB;
 	&:hover, &.active {
 		background: #fff;
 		font-weight: 700;
-		box-shadow: 0 0 1px rgba(0, 0, 0, 0.4);
+		-webkit-box-shadow: 0 0 1px rgba(0, 0, 0, 0.4);
+		        box-shadow: 0 0 1px rgba(0, 0, 0, 0.4);
 	}
 }
 .signup-input {
@@ -400,16 +410,16 @@
   }
 }
 
-//====================================
-// Product and Features
-//====================================
+/*====================================*/
+/* Product and Features*/
+/*====================================*/
 
 .curve-cotainer {
 	position: relative;
 }
 .curve-header {
 	position: absolute;
-	top: 100px;
+	top: 85px;
 	width: 100%;
 }
 .feature-curve__item {
@@ -421,6 +431,7 @@
 	}
 	.curve-line {
 		display: none;
+		-webkit-transition: all 0.5s ease-in-out;
 		transition: all 0.5s ease-in-out;
 		cursor: default;
 	}
@@ -443,9 +454,6 @@
 	bottom: 60px;
 	left: 50%;
 	-webkit-transform: translateX(-50%);
-	   -moz-transform: translateX(-50%);
-	    -ms-transform: translateX(-50%);
-	     -o-transform: translateX(-50%);
 	        transform: translateX(-50%);
 	.primary-btn {
 		padding: 16px 47px;
@@ -456,7 +464,8 @@
 .curve-item__container {
 	padding: 5%;
 	background: #F5F5F5;
-	box-shadow: 0 2px 10px 0 rgba(0,0,0,0.14);
+	-webkit-box-shadow: 0 2px 10px 0 rgba(0,0,0,0.14);
+	        box-shadow: 0 2px 10px 0 rgba(0,0,0,0.14);
 	border-radius: 4px 4px 0 4px 4px;
 }
 .curve-item__header {
@@ -469,33 +478,12 @@
 	line-height: 28px;
 	font-weight: 400;
 }
-#retrieve-info:target {
-	display: block;
-}
-#store-info:target {
-	display: block;
-}
-#prepare-info:target {
-	display: block;
-}
-#discover-info:target {
-	display: block;
-}
-#analyze-info:target {
-	display: block;
-}
-#visualize-info:target {
-	display: block;
-}
-#communicate-info:target {
-	display: block;
-}
-//====================================
-// About us
-//====================================
+/*====================================*/
+/* About us*/
+/*====================================*/
 
 .about {
-	padding-top: 100px;
+	padding-top: 85px;
 }
 .about-text {
 	padding: 80px 10% 0 10%;
@@ -504,18 +492,22 @@
 	line-height: 28px;
 }
 
-//====================================
-// Plans and Pricing
-//====================================
+/*====================================*/
+/* Plans and Pricing*/
+/*====================================*/
 
 .plans {
-	padding-top: 100px;
+	padding-top: 85px;
 }
 .card-container {
 	margin-top: 70px;
 	padding: 0 30px;
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	justify-content: space-between;
+	-webkit-box-pack: justify;
+	    -ms-flex-pack: justify;
+	        justify-content: space-between;
 }
 .card {
 	height: 550px;
@@ -539,7 +531,8 @@
 	background: #f5f5f5;
 	width: 390px;
 	position: relative;
-	box-shadow: 0 2px 4px 0 rgba(0,0,0,0.24);
+	-webkit-box-shadow: 0 2px 4px 0 rgba(0,0,0,0.24);
+	        box-shadow: 0 2px 4px 0 rgba(0,0,0,0.24);
 	border-radius: 4px;
 }
 .card__btn {
