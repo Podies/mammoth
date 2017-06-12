@@ -255,11 +255,13 @@
 	.features {
 		padding: 0px;
 		padding-bottom: 70px;
+		position: relative;
 		.title-text {
 			position: absolute;
 			width: 100%;
 			left: 50%;
-			margin-top: 25px;
+			top: 15%;
+			margin-top: 0px;
 			font-weight: 700;
 			font-size: 15px;
 			line-height: 22.4px;
