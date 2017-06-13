@@ -19,6 +19,87 @@ close.onclick = function() {
   modal.style.display = "none";
 }
 
+// Handle form options.
+var choices = document.getElementsByClassName('signup-choice__item');
+
+var form = {
+  category: choices[0].getAttribute('data-value'),
+}
+
+// remove active class in all options.
+function removeActiveClass() {
+  for (var opt in choices) {
+    choices[opt].className = 'signup-choice__item';
+  }
+}
+
+// loop through all choices and add an event handler.
+for (var opt in choices) {
+  choices[opt].onclick = function (e) {
+    removeActiveClass();
+    e.currentTarget.className += ' active';
+    form.category = e.currentTarget.getAttribute('data-value');
+  }
+}
+
+function submitForm(e) {
+  // body...
+  form.name = document.getElementById('form-name').value;
+  form.email = document.getElementById('form-email').value;
+  form.optional_input = document.getElementById('form-optional').value;
+
+  if (!form.name || !form.email || !form.category) {
+    return false;
+  } else {
+    var url = 'http://ms-backend.mammoth.io/connect/';
+    var req = new Request(url, { method: 'POST', body: JSON.stringify(form) });
+
+    fetch(req, {mode: 'cors'}).then(function (res) {
+      console.log(res, 'res');
+      document.getElementById('form-wrapper').innerHTML = "<h4 className='success-msg'>Success</h4>";
+    }).catch(function (error) {
+      console.log(error, 'error');
+      document.getElementById('form-wrapper').innerHTML = "<h4 className='error-msg'>error</h4>";
+    })
+
+    // var xmlHttp = new XMLHttpRequest();
+
+    // xmlHttp.onreadystatechange = function() {
+    //   if (xmlHttp.readyState == XMLHttpRequest.DONE ) {
+    //      if (xmlHttp.status == 200) {
+    //         console.log('okkk')
+    //          document.getElementById("myDiv").innerHTML = xmlhttp.responseText;
+    //      }
+    //      else if (xmlHttp.status == 400) {
+    //         alert('There was an error 400');
+    //      }
+    //      else {
+    //          alert('something else other than 200 was returned');
+    //      }
+    //   }
+    // };
+
+    // xmlHttp.open("POST", "http://ms-backend.mammoth.io/connect/");
+    // xmlHttp.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
+    // xmlHttp.send(JSON.stringify(form));
+  }
+  return false;
+}
+
+// document.getElementById('submit-form').onclick = function (e) {
+
+//   // e.preventDefault();
+//   var name = document.getElementById('form-name').value;
+//   var email = document.getElementById('form-email').value;
+//   var optional = document.getElementById('form-optional').value;
+//   console.log(name, email, optional, form.selectedValue); 
+//   e.preventDefault();
+//   if (!name || !email) {
+//     //send error
+//     return;
+//   }
+// }
+
 // When the user clicks anywhere outside of the modal, close it
 window.onclick = function(event) {
   if (event.target == modal) {
