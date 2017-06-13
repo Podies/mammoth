@@ -73,7 +73,7 @@
 								<h3 class="subhead-text">and everything in between</h3>
 								<img src="images/data-icons.png" class="small-screen-img data-icons" alt="">
 							</di>
-							<button type="button" id="btn" class="btn hero__btn primary-btn">Get started</button>
+							<button type="button" id="get-started" class="btn hero__btn primary-btn">Get started</button>
 							<img src="images/zen.png" class="small-screen-img" alt="">
 						</div>
 					</div>
@@ -195,55 +195,59 @@
 				<div class="modal__box">
 					<div class="remove-btn">
 						<svg width="21px" height="21px" viewBox="0 0 21 21" class="close-btn" id="remove">
-							<g id="close-btn" transform="translate(-712.000000, -24.000000)" stroke="#BCBCBC" stroke-width="2">
-								<g id="close-icon" transform="translate(713.000000, 25.000000)">
-										<path d="M18.4922387,0 L0,18.4922387" id="Line"></path>
-										<path d="M18.4922387,0 L0,18.4922387" id="Line-Copy" transform="translate(9.246119, 9.246119) scale(-1, 1) translate(-9.246119, -9.246119) "></path>
-								</g>
-							</g>
+			        <g id="close-btn" transform="translate(-712.000000, -24.000000)" stroke="#BCBCBC" stroke-width="2">
+		            <g id="close-icon" transform="translate(713.000000, 25.000000)">
+		                <path d="M18.4922387,0 L0,18.4922387" id="Line"></path>
+		                <path d="M18.4922387,0 L0,18.4922387" id="Line-Copy" transform="translate(9.246119, 9.246119) scale(-1, 1) translate(-9.246119, -9.246119) "></path>
+		            </g>
+			        </g>
 						</svg>
 					</div>
 					<div class="text-center">
-						<img src="images/mammoth-logo-without-icon.svg" class="modal__logo img-responsive" alt="mammoth logo">
+						<img src="../images/mammoth-logo-without-icon.svg" class="modal__logo img-responsive" alt="mammoth logo">
 					</div>
-					<div class="text-center">
-						<h5 class="signup-ques">Why are you signing up?</h5>
-					</div>
-					<div class="signup-choices">
-						<ul class="signup-choice__list">
-							<li class="signup-choice__item">Interested in<br /> Data Analytics</li>
-							<li class="signup-choice__item">I may need some<br /> help</li>
-							<li class="signup-choice__item">Improve my<br /> actual solution</li>
-							<li class="signup-choice__item active">I am drowning in<br /> data!</li>
-						</ul>
-					</div>
-					<div class="select-container">
-						<select name="" class="select__item-list">
-							<option value="Interested in Data Analytics">Interested in Data Analytics</option>
-							<option value="I may need some help">I may need some help</option>
-							<option value="mprove my actual solution ">mprove my actual solution </option>
-							<option value="I am drowning in data!">I am drowning in data!</option>
-						</select>
-					</div>
-					<div class="signup-input">
-						<div class="col-md-6 col-md-offset-3">
-							<div>
-								<input class="form-control" type="text" name="" value="" placeholder="Your name" />
-							</div>
-							<div>
-								<input class="form-control" type="email" name="" value="" placeholder="Email address" />
-							</div>
-							<div>
-								<input class="form-control" type="text" name="" value="" placeholder="optional" />
-							</div>
+					<div id="form-wrapper">
+						<div class="text-center">
+							<h5 class="signup-ques">Why are you signing up?</h5>
 						</div>
-						<div class="clearfix"></div>
-					</div>
-					<div class="text-center">
-						<button type="button" class="btn primary-btn submit-btn">submit</button>
+						<div class="signup-choices">
+							<ul class="signup-choice__list">
+								<li class="signup-choice__item active" data-value="Interested in Data Analytics">Interested in<br /> Data Analytics</li>
+								<li class="signup-choice__item" data-value="I may need some help">I may need some<br /> help</li>
+								<li class="signup-choice__item" data-value="Improve my actual solution">Improve my<br /> actual solution </li>
+								<li class="signup-choice__item" data-value="I am drowning in data!">I am drowning in<br /> data!</li>
+							</ul>
+						</div>
+						<div class="select-container">
+							<select name="" class="select__item-list">
+								<option value="Interested in Data Analytics">Interested in Data Analytics</option>
+								<option value="I may need some help">I may need some help</option>
+								<option value="Improve my actual solution">Improve my actual solution </option>
+								<option value="I am drowning in data!">I am drowning in data!</option>
+							</select>
+						</div>
+						<form onsubmit="return submitForm()">
+							<div class="signup-input">
+								<div class="col-md-6 col-md-offset-3">
+									<div>
+										<input class="form-control" type="name" id="form-name" name="" placeholder="Your name" required />
+									</div>
+									<div>
+										<input class="form-control" type="email" id="form-email" name="" placeholder="Email address" required />
+									</div>
+									<div>
+										<input class="form-control" type="text" id="form-optional" name="" placeholder="optional" />
+									</div>
+								</div>
+								<div class="clearfix"></div>
+							</div>
+							<div class="text-center">
+								<button type="submit" id="submit-form" class="btn primary-btn submit-btn">submit</button>
+							</div>
+						</form>
 					</div>
 				</div>
-			</section>	
+			</section>		
 		</main>
 		<script src="script/script.js" type="text/javascript" charset="utf-8" async defer></script>
 
