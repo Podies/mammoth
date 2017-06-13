@@ -529,64 +529,6 @@
 				</div>
 			</section>	
 		</main>
-		<script>
-			/* clearLines -
-				Clears all displayed lines
-			*/
-			function clearLines() {
-				var items = document.getElementsByClassName('curve-line')
-				for (var i = items.length; i--;) {
-				  items[i].style.display = 'none';
-				}
-			}
-
-			/* clearInfo -
-				Clears all displayed info
-			*/
-			function clearInfo() {
-				var items = document.getElementsByClassName('curve-item')
-				for (var i = items.length; i--;) {
-				  items[i].style.display = 'none';
-				}
-			}
-
-			/* showInfo -
-				Takes in a id and clears corresponding info.
-			*/
-			function showInfo(id) {
-				clearInfo();
-				var infoId = id.replace('btn', 'info');
-				infoId = infoId.replace('-mobile', '');
-
-				document.getElementById(infoId).style.display = 'block';
-			}
-
-			/* showLine- Takes in an id e.g. 'store-btn',
-				clears all the existing lines,
-				shows corresponding info,
-				sets lines for web and mobile view to display block,
-				reason to change both (web, mobile) is that the line is not lost when browser is resized.
-			*/
-			function showLine(id) {
-				clearLines();
-				showInfo(id);
-				var lineId = id.replace('btn', 'line');
-				lineId = lineId.replace('-mobile', '');
-
-				//make both mobile and web display block;
-				document.getElementById(lineId).style.display = 'block';
-				document.getElementById(lineId+'-mobile').style.display = 'block';
-			}
-
-			// bind all clickable buttons to show corresponding line and info.
-			['store-btn', 'retrieve-btn', 'prepare-btn', 'discover-btn', 'prepare-btn', 'analyze-btn', 'discover-btn', 'visualize-btn', 'communication-btn', 'store-btn-mobile', 'retrieve-btn-mobile', 'prepare-btn-mobile', 'discover-btn-mobile', 'prepare-btn-mobile', 'analyze-btn-mobile', 'discover-btn-mobile', 'visualize-btn-mobile', 'communication-btn-mobile',].forEach(function (item, i) {
-				document.getElementById(item).onclick = function (e) {
-					e.preventDefault();
-					showLine(item);				
-				}
-			});
-
-		</script>
 		<script src="../script/script.js" type="text/javascript" charset="utf-8" async defer></script>
 	</body>
 </html>
