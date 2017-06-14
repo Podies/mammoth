@@ -9,6 +9,9 @@
 		-webkit-transform: translateX(-50%);
 		        transform: translateX(-50%);
 	}
+	.product-btn {
+		display: none;
+	}
 }
 
 @media all and (max-width: 1240px) {
@@ -378,6 +381,11 @@
 	#curve2 {
 		stroke: linear-gradient(#256B47, #86CAA6);
 	}
+	.curve-item {
+		padding: 0 18%;
+		margin-top: -50px;
+		margin-bottom: 50px;
+	}
 	.curve-btn {
 		display: none;
 	}
@@ -402,6 +410,10 @@
 	.curve-item__details {
 		font-size: 12px;
 		line-height: 18px;
+		font-weight: 400;
+	}
+	.product-btn {
+		padding: 11px 56px;
 	}
 
 	/*====================================*/
@@ -446,5 +458,11 @@
 		line-height: 15px;
 		font-weight: 700;
 		text-align: center;
+	}
+}
+
+@media all and (max-width: 530px) {
+	.curve-item {
+		padding: 0 5%;
 	}
 }

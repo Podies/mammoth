@@ -424,6 +424,9 @@
 .feature-curve__item {
 	.feature-curve__text {
 		@extend %transition;
+		&.active {
+			font-weight: 900;
+		}
 	}
 	&:hover .feature-curve__text{
 		font-weight: 900;
