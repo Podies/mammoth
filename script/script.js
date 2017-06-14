@@ -39,6 +39,18 @@ for (var opt in choices) {
     removeActiveClass();
     e.currentTarget.className += ' active';
     form.category = e.currentTarget.getAttribute('data-value');
+    document.getElementById('mobile-select').value = form.category;
+  }
+}
+
+function selectOption() {
+  form.category = document.getElementById('mobile-select').value;
+  // to make it work if modal is stretched to web version.
+  removeActiveClass();
+  for (var opt in choices) {
+    if(choices[opt] && choices[opt].nodeType === 1 && choices[opt].getAttribute('data-value') == form.category) {
+      choices[opt].className += ' active';
+    }
   }
 }
 
