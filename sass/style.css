@@ -529,8 +529,7 @@ input:focus {
   font-size: 0.875em;
   font-weight: 300;
   background: #fff;
-  border: 0;
-  border-bottom: 1px solid #BCBCBC;
+  border: 1px solid #ccc;
   text-align: center; }
 
 /*====================================*/
@@ -903,6 +902,8 @@ input:focus {
   top: 85px;
   width: 100%; }
 
+.feature-curve__item .feature-curve__text.active {
+  font-weight: 900; }
 .feature-curve__item:hover .feature-curve__text {
   font-weight: 900; }
 .feature-curve__item .curve-line {
@@ -1026,7 +1027,10 @@ input:focus {
   .hero__btn {
     left: 50%;
     -webkit-transform: translateX(-50%);
-    transform: translateX(-50%); } }
+    transform: translateX(-50%); }
+
+  .product-btn {
+    display: none; } }
 @media all and (max-width: 1240px) {
   .heading-text {
     font-size: 30px;
@@ -1346,6 +1350,11 @@ input:focus {
   #curve2 {
     stroke: linear-gradient(#256B47, #86CAA6); }
 
+  .curve-item {
+    padding: 0 18%;
+    margin-top: -50px;
+    margin-bottom: 50px; }
+
   .curve-btn {
     display: none; }
 
@@ -1367,7 +1376,11 @@ input:focus {
 
   .curve-item__details {
     font-size: 12px;
-    line-height: 18px; }
+    line-height: 18px;
+    font-weight: 400; }
+
+  .product-btn {
+    padding: 11px 56px; }
 
   /*====================================*/
   /* Plans and Pricing*/
@@ -1409,5 +1422,8 @@ input:focus {
     line-height: 15px;
     font-weight: 700;
     text-align: center; } }
+@media all and (max-width: 530px) {
+  .curve-item {
+    padding: 0 5%; } }
 
 /*# sourceMappingURL=style.css.map */
